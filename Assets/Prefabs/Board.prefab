@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5228271870221544010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5228271870221544004}
+  - component: {fileID: 5228271870221544005}
+  m_Layer: 0
+  m_Name: Board
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5228271870221544004
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5228271870221544010}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5228271870221544005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5228271870221544010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8216f83ca9c3c2e44937d9fa3a680a5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 9
+  height: 9
+  bgTilePrefab: {fileID: 2814998562339804330, guid: 16c6929f2b7a165469913ea3bafb783b, type: 3}
+  gems:
+  - {fileID: 1631686955439215221, guid: fe582dfad3bd5634ba0a8d152d146bc0, type: 3}
+  - {fileID: 5852430743319393968, guid: 0e9845f4e2c7e6a4d9c3b64c5836b69a, type: 3}
+  - {fileID: 2044762615871773288, guid: 2de9849190fae7c4781a7d58d11fbd8d, type: 3}
+  - {fileID: 5266573569839858559, guid: ee3efe677593c4b4ea66fa9309b9250c, type: 3}
+  - {fileID: 4937133849190347192, guid: a865634f4a0dcc547a3dc554602c47e0, type: 3}
+  - {fileID: 4799095952840353814, guid: 745b963f4f3987644afdae7f8eca9069, type: 3}
+  - {fileID: 366026753785516847, guid: 6602d909d2a9db44ebdd62b7982e7a4b, type: 3}
