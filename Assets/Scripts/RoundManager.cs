@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RoundManager : MonoBehaviour 
 { /// Sét thời gian cho vòng game
@@ -18,14 +19,20 @@ public class RoundManager : MonoBehaviour
     public int scoreTarget1, scoreTarget2, scoreTarget3;
 
     public int starCount;
+    public int currentLevel;
     private void Awake()
     {
         starCount = PlayerPrefs.GetInt("STAR", 0);
         uiMan = FindObjectOfType<UIManager>();
         board = FindObjectOfType<Board>();
     }
+    private void Start()
+    {
+        
+    }
     private void Update()
     {
+
         if(roundTime > 0)
         {
             roundTime -= Time.deltaTime;
@@ -86,6 +93,12 @@ public class RoundManager : MonoBehaviour
         SFXManager.instance.PlayRoundOver();
     }
 
-   
 
+    private void OnApplicationQuit()
+    {
+        string sceneName = SceneManager.GetActiveScene().name;
+        PlayerPrefs.SetString("SceneName", sceneName);
+        PlayerPrefs.SetInt("CurrentLevel", currentLevel);
+        PlayerPrefs.Save();
+    }
 }

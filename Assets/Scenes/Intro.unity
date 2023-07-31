@@ -1122,6 +1122,7 @@ GameObject:
   - component: {fileID: 1968767009}
   - component: {fileID: 1968767008}
   - component: {fileID: 1968767010}
+  - component: {fileID: 1968767011}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1168,6 +1169,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebd851da19a052e4f802c529688dcc72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1968767011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968767007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 925be1b36b2478d46a76f5b54e913336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delaySecond: 1
+  roundMan: {fileID: 0}
 --- !u!1001 &174032592027836917
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1208,9 +1223,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 531e18c8bcd894f48b18249defc8dfa4, type: 3}
     - target: {fileID: 6310490027496998490, guid: b4447ae6144112143aa54e742e124d5e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310490027496998490, guid: b4447ae6144112143aa54e742e124d5e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1968767008}
+    - target: {fileID: 6310490027496998490, guid: b4447ae6144112143aa54e742e124d5e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Load
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310490027496998490, guid: b4447ae6144112143aa54e742e124d5e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LoadScene, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6472566154096164405, guid: b4447ae6144112143aa54e742e124d5e, type: 3}
       propertyPath: m_FontData.m_BestFit
       value: 1

@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     public RoundManager roundMan;
+    public Board board;
     public Text timeText;
     public Text scoreText;
     public Text finalScoreText;
@@ -33,14 +34,18 @@ public class UIManager : MonoBehaviour
     public GameObject iconMute;
     public GameObject iconUnMute;
 
+    public Text levelText;
+
     private void Awake()
     {
+        board = FindObjectOfType<Board>();
         notification.SetActive(false);
         roundMan = FindObjectOfType<RoundManager>();
         theBoard = FindObjectOfType<Board>();
         countShuffle = 2;
         countShuffleText.text = countShuffle.ToString();
         Load();
+        levelText.text = roundMan.currentLevel.ToString();
     }
     private void Start()
     {
@@ -148,7 +153,7 @@ public class UIManager : MonoBehaviour
         {
             settingScreen.SetActive(true);
             Time.timeScale = 0f;
-            
+           board.currentState = Board.BoardState.wait;
         }
         
 
@@ -159,6 +164,7 @@ public class UIManager : MonoBehaviour
         {
             settingScreen.SetActive(false);
             Time.timeScale = 1f;
+            board.currentState = Board.BoardState.move;
         }
     }
 
