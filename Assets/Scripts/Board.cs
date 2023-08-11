@@ -105,7 +105,7 @@ public class Board : MonoBehaviour
         gem.SetUpGem(pos, this);
     }
 
-    bool MatchesAt(Vector2Int posToCheck, Gem gemToCheck) // Ngăn chặn tạo match ngay từ đầu
+    bool MatchesAt(Vector2Int posToCheck, Gem gemToCheck) // kiểm tra match
     {
         if (posToCheck.x > 1)
         {
